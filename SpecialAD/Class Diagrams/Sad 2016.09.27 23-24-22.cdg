@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Sad">
+  <ClassDiagramComponents>
+    <Class name="Address" package="cs445.sad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="streetAddress" type="String" visibility="private"/>
+        <Field name="city" type="String" visibility="private"/>
+        <Field name="state" type="String" visibility="private"/>
+        <Field name="zipCode" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="streetAddress"/>
+          <Argument type="String" name="city"/>
+          <Argument type="String" name="state"/>
+          <Argument type="int" name="zipCode"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getStreetAddress" returnType="String" visibility="public"/>
+        <Method name="setStreetAddress" returnType="void" visibility="public">
+          <Argument type="String" name="streetAddress"/>
+        </Method>
+        <Method name="getCity" returnType="String" visibility="public"/>
+        <Method name="setCity" returnType="void" visibility="public">
+          <Argument type="String" name="city"/>
+        </Method>
+        <Method name="getState" returnType="String" visibility="public"/>
+        <Method name="setState" returnType="void" visibility="public">
+          <Argument type="String" name="state"/>
+        </Method>
+        <Method name="getZipCode" returnType="int" visibility="public"/>
+        <Method name="setZipCode" returnType="void" visibility="public">
+          <Argument type="int" name="zipCode"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AdminAdvertierResource" package="cs445.sad" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="advertiserDao" type="AdvertiserDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addAdvertiser" returnType="Advertiser" visibility="public">
+          <Argument type="Advertiser" name="advertiser"/>
+        </Method>
+        <Method name="getAdvertisers" returnType="Collection&lt;Advertiser&gt;" visibility="public"/>
+        <Method name="updateAdvertiser" returnType="Advertiser" visibility="public">
+          <Argument type="Advertiser" name="advertiser"/>
+        </Method>
+        <Method name="getAdvertiser" returnType="Advertiser" visibility="public">
+          <Argument type="String" name="advertiserID"/>
+        </Method>
+        <Method name="deleteAdvertiser" returnType="void" visibility="public">
+          <Argument type="String" name="advertiserID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminCategoryResource" package="cs445.sad" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="categoryDao" type="CategoryDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addCategory" returnType="Category" visibility="public">
+          <Argument type="Category" name="category"/>
+        </Method>
+        <Method name="getCategories" returnType="Collection&lt;Category&gt;" visibility="public"/>
+        <Method name="updateCategory" returnType="Category" visibility="public">
+          <Argument type="Category" name="category"/>
+        </Method>
+        <Method name="getCategory" returnType="Category" visibility="public">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+        <Method name="deleteCategory" returnType="void" visibility="public">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdminListingResource" package="cs445.sad" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="listingDao" type="ListingDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addListing" returnType="Listing" visibility="public">
+          <Argument type="Listing" name="listing"/>
+        </Method>
+        <Method name="getListings" returnType="Collection&lt;Listing&gt;" visibility="public"/>
+        <Method name="updateListing" returnType="Listing" visibility="public">
+          <Argument type="Listing" name="listing"/>
+        </Method>
+        <Method name="getListing" returnType="Listing" visibility="public">
+          <Argument type="String" name="listingID"/>
+        </Method>
+        <Method name="deleteListing" returnType="void" visibility="public">
+          <Argument type="String" name="listingID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Advertiser" package="cs445.sad" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="advertiserID" type="String" visibility="private"/>
+        <Field name="firstName" type="String" visibility="private"/>
+        <Field name="lastName" type="String" visibility="private"/>
+        <Field name="businessName" type="String" visibility="private"/>
+        <Field name="address" type="Address" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="facebook" type="String" visibility="private"/>
+        <Field name="twitter" type="String" visibility="private"/>
+        <Field name="linkedin" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="aID"/>
+          <Argument type="String" name="firstName"/>
+          <Argument type="String" name="lastName"/>
+          <Argument type="String" name="businessName"/>
+          <Argument type="Address" name="address"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="phone"/>
+          <Argument type="String" name="facebook"/>
+          <Argument type="String" name="twitter"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAdvertiserID" returnType="String" visibility="public"/>
+        <Method name="setAdvertiserID" returnType="void" visibility="public">
+          <Argument type="String" name="aID"/>
+        </Method>
+        <Method name="getFirstName" returnType="String" visibility="public"/>
+        <Method name="setFirstName" returnType="void" visibility="public">
+          <Argument type="String" name="firstName"/>
+        </Method>
+        <Method name="getLastName" returnType="String" visibility="public"/>
+        <Method name="setLastName" returnType="void" visibility="public">
+          <Argument type="String" name="lastName"/>
+        </Method>
+        <Method name="getBusinessName" returnType="String" visibility="public"/>
+        <Method name="setBusinessName" returnType="void" visibility="public">
+          <Argument type="String" name="businessName"/>
+        </Method>
+        <Method name="getAddress" returnType="Address" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="Address" name="address"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getFacebook" returnType="String" visibility="public"/>
+        <Method name="setFacebook" returnType="void" visibility="public">
+          <Argument type="String" name="facebook"/>
+        </Method>
+        <Method name="getTwitter" returnType="String" visibility="public"/>
+        <Method name="setTwitter" returnType="void" visibility="public">
+          <Argument type="String" name="twitter"/>
+        </Method>
+        <Method name="getLinkedin" returnType="String" visibility="public"/>
+        <Method name="setLinkedin" returnType="void" visibility="public">
+          <Argument type="String" name="linkedin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdvertiserApplication" package="cs445.sad" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="AdvertiserDao" name="dao"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AdvertiserDao" package="cs445.sad" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="advertisers" type="Map&lt;String, Advertiser&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAdvertisers" returnType="Collection&lt;Advertiser&gt;" visibility="package"/>
+        <Method name="getAdvertiser" returnType="Advertiser" visibility="package">
+          <Argument type="String" name="advertiserID"/>
+        </Method>
+        <Method name="addAdvertiser" returnType="Advertiser" visibility="package">
+          <Argument type="Advertiser" name="advertiser"/>
+        </Method>
+        <Method name="updateDavertiser" returnType="Advertiser" visibility="package">
+          <Argument type="Advertiser" name="advertiser"/>
+        </Method>
+        <Method name="deleteAdvertiser" returnType="void" visibility="public">
+          <Argument type="String" name="advertiserID"/>
+        </Method>
+        <Method name="searchByLastName" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="lastName"/>
+        </Method>
+        <Method name="searchByEmail" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="searchByBusiness" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="business"/>
+        </Method>
+        <Method name="searchByPhone" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="searchByFacebook" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="facebook"/>
+        </Method>
+        <Method name="searchByTwitter" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="twitter"/>
+        </Method>
+        <Method name="searchByLinkedin" returnType="Collection&lt;Advertiser&gt;" visibility="package">
+          <Argument type="String" name="linkedin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdvertiserNotFoundException" package="cs445.sad" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="m"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AdvertiserNotFoundMapper" package="cs445.sad" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toResponse" returnType="Response" visibility="public">
+          <Argument type="AdvertiserNotFoundException" name="ex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AdvertiserResource" package="cs445.sad" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="advertiserDao" type="AdvertiserDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAdvertisers" returnType="Collection&lt;Advertiser&gt;" visibility="public"/>
+        <Method name="getAdvertiser" returnType="Advertiser" visibility="public">
+          <Argument type="String" name="advertiserID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BaseURI" package="cs445.sad" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="dao" type="ListingDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getListings" returnType="Collection&lt;Listing&gt;" visibility="public"/>
+        <Method name="getHomePageListing" returnType="Listing" visibility="public">
+          <Argument type="String" name="listingId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Category" package="cs445.sad" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="categoryID" type="String" visibility="private"/>
+        <Field name="categoryName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="categoryID"/>
+          <Argument type="String" name="categoryName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCategoryID" returnType="String" visibility="public"/>
+        <Method name="getCategoryID" returnType="String" visibility="public">
+          <Argument type="String" name="categoryId"/>
+        </Method>
+        <Method name="setCategoryID" returnType="void" visibility="public">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+        <Method name="getCategoryName" returnType="String" visibility="public"/>
+        <Method name="setCategoryName" returnType="void" visibility="public">
+          <Argument type="String" name="categoryName"/>
+        </Method>
+        <Method name="key" returnType="String" visibility="public">
+          <Argument type="String" name="categoryId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoryApplication" package="cs445.sad" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="CategoryDao" name="dao"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="CategoryDao" package="cs445.sad" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="categories" type="Map&lt;String, Category&gt;" visibility="package"/>
+        <Field name="listingsInCategory" type="List&lt;Listing&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCategories" returnType="Collection&lt;Category&gt;" visibility="package"/>
+        <Method name="getCategory" returnType="Category" visibility="package">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+        <Method name="getCategoryListings" returnType="List&lt;Listing&gt;" visibility="package">
+          <Argument type="String" name="categoryId"/>
+        </Method>
+        <Method name="addCategory" returnType="Category" visibility="package">
+          <Argument type="Category" name="category"/>
+        </Method>
+        <Method name="updateCategory" returnType="Category" visibility="package">
+          <Argument type="Category" name="category"/>
+        </Method>
+        <Method name="deleteCategory" returnType="void" visibility="public">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoryNotFoundException" package="cs445.sad" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="m"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="CategoryNotFoundMapper" package="cs445.sad" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toResponse" returnType="Response" visibility="public">
+          <Argument type="CategoryNotFoundException" name="ex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoryResource" package="cs445.sad" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="dao" type="CategoryDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCategorys" returnType="Collection&lt;Category&gt;" visibility="public"/>
+        <Method name="getCategoryinListing" returnType="List&lt;Listing&gt;" visibility="public">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Listing" package="cs445.sad" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="listingId" type="String" visibility="private"/>
+        <Field name="businessDescription" type="String" visibility="private"/>
+        <Field name="image" type="String" visibility="private"/>
+        <Field name="websiteLink" type="String" visibility="private"/>
+        <Field name="price" type="String" visibility="private"/>
+        <Field name="startDate" type="Date" visibility="private"/>
+        <Field name="endDate" type="Date" visibility="private"/>
+        <Field name="category" type="Category" visibility="private"/>
+        <Field name="advertiser" type="Advertiser" visibility="private"/>
+        <Field name="typeOfListing" type="TypesOfListing" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="listingId"/>
+          <Argument type="String" name="businessDescription"/>
+          <Argument type="String" name="image"/>
+          <Argument type="String" name="websiteLink"/>
+          <Argument type="String" name="price"/>
+          <Argument type="Date" name="startDate"/>
+          <Argument type="Date" name="endDate"/>
+          <Argument type="Category" name="category"/>
+          <Argument type="Advertiser" name="advertiser"/>
+          <Argument type="TypesOfListing" name="typeOfListing"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getListingId" returnType="String" visibility="public"/>
+        <Method name="getListingId" returnType="String" visibility="public">
+          <Argument type="String" name="listingId"/>
+        </Method>
+        <Method name="setListingId" returnType="void" visibility="public">
+          <Argument type="String" name="listingId"/>
+        </Method>
+        <Method name="getBusinessDescription" returnType="String" visibility="public"/>
+        <Method name="setBusinessDescription" returnType="void" visibility="public">
+          <Argument type="String" name="businessDescription"/>
+        </Method>
+        <Method name="getImage" returnType="String" visibility="public"/>
+        <Method name="setImage" returnType="void" visibility="public">
+          <Argument type="String" name="image"/>
+        </Method>
+        <Method name="getWebsiteLink" returnType="String" visibility="public"/>
+        <Method name="setWebsiteLink" returnType="void" visibility="public">
+          <Argument type="String" name="websiteLink"/>
+        </Method>
+        <Method name="getPrice" returnType="String" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="String" name="price"/>
+        </Method>
+        <Method name="getStartDate" returnType="Date" visibility="public"/>
+        <Method name="setStartDate" returnType="void" visibility="public">
+          <Argument type="Date" name="startDate"/>
+        </Method>
+        <Method name="getEndDate" returnType="Date" visibility="public"/>
+        <Method name="setEndDate" returnType="void" visibility="public">
+          <Argument type="Date" name="endDate"/>
+        </Method>
+        <Method name="getCategory" returnType="Category" visibility="public"/>
+        <Method name="getCategory" returnType="Category" visibility="public">
+          <Argument type="String" name="categoryID"/>
+        </Method>
+        <Method name="setCategory" returnType="void" visibility="public">
+          <Argument type="Category" name="category"/>
+        </Method>
+        <Method name="getAdvertiser" returnType="Advertiser" visibility="public"/>
+        <Method name="getAdvertiser" returnType="Advertiser" visibility="public">
+          <Argument type="AdvertiserDao" name="advertiserID"/>
+        </Method>
+        <Method name="setAdvertiser" returnType="void" visibility="public">
+          <Argument type="Advertiser" name="advertiser"/>
+        </Method>
+        <Method name="getTypeOfListing" returnType="TypesOfListing" visibility="public"/>
+        <Method name="getTypeOfListing" returnType="TypesOfListing" visibility="public">
+          <Argument type="TypesOfListing" name="listingType"/>
+        </Method>
+        <Method name="setTypeOfListing" returnType="void" visibility="public">
+          <Argument type="TypesOfListing" name="typeOfListing"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListingApplication" package="cs445.sad" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="ListingDao" name="dao"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ListingDao" package="cs445.sad" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="listings" type="Map&lt;String, Listing&gt;" visibility="package"/>
+        <Field name="homePageListings" type="List&lt;Listing&gt;" visibility="package"/>
+        <Field name="listingsInCategory" type="List&lt;Listing&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListings" returnType="Collection&lt;Listing&gt;" visibility="package"/>
+        <Method name="getListing" returnType="Listing" visibility="package">
+          <Argument type="String" name="listingId"/>
+        </Method>
+        <Method name="getHomePageListings" returnType="List&lt;Listing&gt;" visibility="package"/>
+        <Method name="addListing" returnType="Listing" visibility="package">
+          <Argument type="Listing" name="listing"/>
+        </Method>
+        <Method name="updateListing" returnType="Listing" visibility="package">
+          <Argument type="Listing" name="listing"/>
+        </Method>
+        <Method name="deleteListing" returnType="void" visibility="public">
+          <Argument type="String" name="listingId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListingNotFoundException" package="cs445.sad" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="String" name="m"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ListingNotFoundMapper" package="cs445.sad" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="toResponse" returnType="Response" visibility="public">
+          <Argument type="ListingNotFoundException" name="ex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListingResource" package="cs445.sad" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="dao" type="ListingDao" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getListings" returnType="Collection&lt;Listing&gt;" visibility="public"/>
+        <Method name="getListing" returnType="Listing" visibility="public">
+          <Argument type="String" name="listingId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="cs445.sad" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="BASE_URI" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="startServer" returnType="HttpServer" visibility="public" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RegisterMultipleDao" package="cs445.sad" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SrcResource" package="cs445.sad" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="dao" type="AdvertiserDao" visibility="package"/>
+        <Field name="advertiser" type="Advertiser" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAdvertiserByEmail" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getAdvertiserByLastName" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="lastName"/>
+        </Method>
+        <Method name="getAdvertiserByBusinessName" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="business"/>
+        </Method>
+        <Method name="getAdvertiserByPhone" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="phone"/>
+        </Method>
+        <Method name="getAdvertiserByFacebook" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="facebook"/>
+        </Method>
+        <Method name="getAdvertiserByTwitter" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="twitter"/>
+        </Method>
+        <Method name="getAdvertiserByLinkedin" returnType="Collection&lt;Advertiser&gt;" visibility="public">
+          <Argument type="String" name="linkedin"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="TypesOfListing" package="cs445.sad" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Literals>
+        <Literal name="Regular"/>
+        <Literal name="CategoryFeatured"/>
+        <Literal name="HomePageFeatured"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="cs445.sad.CategoryNotFoundMapper" target="cs445.sad.CategoryNotFoundException" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listings" source="cs445.sad.ListingDao" target="cs445.sad.Listing" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;String, Listing&gt;"/>
+    <HasRelation name="categories" source="cs445.sad.CategoryDao" target="cs445.sad.Category" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;String, Category&gt;"/>
+    <UseRelation source="cs445.sad.Listing" target="cs445.sad.Advertiser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.Listing" target="cs445.sad.TypesOfListing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="advertiserDao" source="cs445.sad.AdminAdvertierResource" target="cs445.sad.AdvertiserDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="advertiser" source="cs445.sad.Listing" target="cs445.sad.Advertiser" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.SrcResource" target="cs445.sad.Advertiser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.ListingResource" target="cs445.sad.Listing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.Listing" target="cs445.sad.Category" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="advertiser" source="cs445.sad.SrcResource" target="cs445.sad.Advertiser" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="address" source="cs445.sad.Advertiser" target="cs445.sad.Address" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.ListingDao" target="cs445.sad.Listing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="advertiserDao" source="cs445.sad.AdvertiserResource" target="cs445.sad.AdvertiserDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listingsInCategory" source="cs445.sad.CategoryDao" target="cs445.sad.Listing" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Listing&gt;"/>
+    <HasRelation name="category" source="cs445.sad.Listing" target="cs445.sad.Category" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.Listing" target="cs445.sad.AdvertiserDao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listingsInCategory" source="cs445.sad.ListingDao" target="cs445.sad.Listing" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Listing&gt;"/>
+    <UseRelation source="cs445.sad.AdvertiserResource" target="cs445.sad.Advertiser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="homePageListings" source="cs445.sad.ListingDao" target="cs445.sad.Listing" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Listing&gt;"/>
+    <UseRelation source="cs445.sad.BaseURI" target="cs445.sad.Listing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.CategoryResource" target="cs445.sad.Category" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dao" source="cs445.sad.SrcResource" target="cs445.sad.AdvertiserDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.AdvertiserDao" target="cs445.sad.Advertiser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoryDao" source="cs445.sad.AdminCategoryResource" target="cs445.sad.CategoryDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dao" source="cs445.sad.BaseURI" target="cs445.sad.ListingDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListingDao"/>
+    <UseRelation source="cs445.sad.CategoryDao" target="cs445.sad.Listing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dao" source="cs445.sad.ListingResource" target="cs445.sad.ListingDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListingDao"/>
+    <UseRelation source="cs445.sad.AdminAdvertierResource" target="cs445.sad.Advertiser" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.AdvertiserNotFoundMapper" target="cs445.sad.AdvertiserNotFoundException" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.AdminCategoryResource" target="cs445.sad.Category" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.CategoryResource" target="cs445.sad.Listing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="typeOfListing" source="cs445.sad.Listing" target="cs445.sad.TypesOfListing" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="TypesOfListing"/>
+    <HasRelation name="listingDao" source="cs445.sad.AdminListingResource" target="cs445.sad.ListingDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListingDao"/>
+    <UseRelation source="cs445.sad.AdminListingResource" target="cs445.sad.Listing" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.CategoryDao" target="cs445.sad.Category" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dao" source="cs445.sad.CategoryResource" target="cs445.sad.CategoryDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="cs445.sad.Advertiser" target="cs445.sad.Address" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="advertisers" source="cs445.sad.AdvertiserDao" target="cs445.sad.Advertiser" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;String, Advertiser&gt;"/>
+    <UseRelation source="cs445.sad.ListingNotFoundMapper" target="cs445.sad.ListingNotFoundException" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
